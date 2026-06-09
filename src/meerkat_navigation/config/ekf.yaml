@@ -1,0 +1,41 @@
+ekf_filter_node:
+  ros__parameters:
+    frequency: 50.0
+    sensor_timeout: 0.1
+    two_d_mode: true
+    predict_to_current_time: true
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom
+
+    publish_tf: true
+    print_diagnostics: true
+
+    # -----------------------
+    # Wheel odometry (TWIST)
+    # -----------------------
+    odom0: /odom
+    odom0_config: [false, false, false,   # x y z
+                   false, false, false,   # roll pitch yaw
+                   true,  false, false,   # vx vy vz  (use vx)
+                   false, false, true,    # vroll vpitch vyaw (use wz)
+                   false, false, false]   # ax ay az
+    odom0_queue_size: 10
+    odom0_differential: false
+    odom0_relative: false
+
+    # -----------------------
+    # VectorNav IMU
+    # -----------------------
+    imu0: /vectornav/imu
+    imu0_config: [false, false, false,    # x y z
+                  false, false, true,     # roll pitch yaw (use yaw only)
+                  false, false, false,    # vx vy vz
+                  false, false, true,     # gyro: use yaw rate only
+                  false, false, false]    # accel (not used)
+    imu0_queue_size: 10
+    imu0_differential: false
+    imu0_relative: false
+    imu0_remove_gravitational_acceleration: true

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Meerkat Autostart
+Comment=Meerkat foundation + GUI mode controller
+Exec=/bin/bash -lc "/home/teal/Downloads/lio_ws/src/meerkat_autostart/scripts/start_robot.sh"
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Terminal=false

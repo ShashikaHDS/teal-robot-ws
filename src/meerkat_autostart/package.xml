@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>meerkat_autostart</name>
+  <version>0.0.1</version>
+  <description>Boot bringup, GUI mode controller, and DS4 shortcuts for Meerkat.</description>
+  <maintainer email="teal@example.com">teal</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>ds4_driver_msgs</exec_depend>
+  <exec_depend>lio_sam</exec_depend>
+  <exec_depend>meerkat_motors</exec_depend>
+  <exec_depend>meerkat_navigation</exec_depend>
+  <exec_depend>python3-tk</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
