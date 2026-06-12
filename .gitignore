@@ -9,16 +9,18 @@ src.zip
 backup_teal.zip
 10mar26.zip
 
-# --- third-party packages (cloned from upstream) ---
-# Keep these out of the repo — the user's modifications to LIO-SAM are
-# preserved in patches/ for reference. Re-clone these from upstream into src/.
+# --- third-party packages (cloned from upstream, NOT tracked) ---
+# LIO-SAM and vectornav ARE tracked because they have substantial local
+# modifications. Others are stock — clone from upstream into src/ after first
+# checkout. See docs/SETUP.md.
 src/ds4_driver/
-src/LIO-SAM/
 src/ouster-ros/
-src/vectornav/
 src/zed-ros2-wrapper/
 src/zed-ros2-examples/
 src/sick_scan_xd-develop/
+
+# --- upstream LIO-SAM documentation media (large, not needed) ---
+src/LIO-SAM/config/doc/
 
 # --- editor / IDE state ---
 .vscode/
